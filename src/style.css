@@ -55,6 +55,7 @@ header {
   color: #1450a3;
   cursor: pointer;
   transition: all 150ms ease-in-out;
+  font-weight: 600;
 }
 
 main {
@@ -119,13 +120,8 @@ main {
   display: flex;
   justify-content: space-around;
   font-size: 50px;
-}
-
-.weather-forecast-date,
-.weather-forecast-temperatures,
-.weather-forecast-temperature-max,
-.weather-forecast-temperature-min {
-  background: linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  border-radius: 20px;
 }
 
 .weather-forecast-date,
@@ -148,9 +144,7 @@ main {
 .weather-forecast-temperature-min {
   color: #4488bb;
 }
-.weather-forecast-icon {
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-}
+
 footer {
   border-top: 1px solid #caedff;
   padding: 20px 0 0 0;
