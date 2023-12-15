@@ -51,7 +51,30 @@ function search(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+<div class="weather-forecast-day">
+              <div class="weather-forecast-date">${day}  </div> 
+              <div class = "weather-forecast-icon"> ⛅</div>
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max">15°</span> |
+                <span class="weather-forecast-temperature-min">11°</span>
+            </div>
+            </div>
+            `;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", search);
 
 searchCity("Lisbon");
+displayForecast();
